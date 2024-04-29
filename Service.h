@@ -1,8 +1,10 @@
 #pragma once
 #include <string>
+#include "Weather.h"
 class Service
 {
-	virtual Service getWeather(std::string s) = 0;
-	virtual ~Service();
+public:
+	virtual Weather getWeather(std::string s) = 0;
+	virtual ~Service() {};
 };
 

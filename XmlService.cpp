@@ -22,7 +22,7 @@ Weather XmlService::getWeather(std::string s)
     std::string weather = node.child("precipitation"). // дождь
         attribute("mode").
         as_string(); //  Киров
-    double windSpeed = node.child("speed").
+    double windSpeed = node.child("wind").child("speed").
         attribute("value").
         as_double(); // 5.69
     int clouds = node.child("clouds"). // 100
